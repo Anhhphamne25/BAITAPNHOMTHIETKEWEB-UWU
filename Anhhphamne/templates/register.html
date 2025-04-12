@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đăng ký</title>
+</head>
+<body>
+    <h2>Đăng ký</h2>
+    <button onclick="window.location.href='/login'">Đăng nhập</button>
+    <form method="POST" action="/register">
+        <label for="username">Tên đăng nhập:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+        {%if message1 %}
+            <p style="color: red;">{{ message1 }}</p>
+        {% endif %}
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Mật khẩu:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <label for="confirm_password">Xác nhận mật khẩu:</label><br>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+
+        {% if message2 %}
+            <p style="color: red;">{{ message }}</p>
+        {% endif %}
+
+        <button type="submit">Đăng ký</button>
+    </form>
+
+</body>
+</html>

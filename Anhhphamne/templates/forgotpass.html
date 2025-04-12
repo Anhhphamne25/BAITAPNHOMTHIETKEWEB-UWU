@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ForgotPassWord??</title>
+</head>
+<body>
+    <h1>Quên mật khẩu</h1>
+    <button onclick="window.location.href='/login'">Đăng nhập</button>
+    <form method="POST" action="/forgotpass">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="old_password">Mật khẩu cũ:</label><br>
+        <input type="text" id="old_password" name="old_password" required><br><br>
+        {% if mess %}
+            <p style="color: red;">{{ mess }}</p>
+            <p style="color:red;">CAYYYYYYYYYYYYYYYYY</p>
+        {% endif %}
+        <label for="new_password">Mật khẩu mới:</label><br>
+        <input type="password" id="new_password" name="new_password" required><br><br>
+        <label for="confirm_password">Xác nhận mật khẩu mới:</label><br>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+        {% if message %}
+            <p style="color: red;">{{ message }}</p>
+        {% endif %}
+        <button type="submit">Gửi yêu cầu</button>
+    </form>
+</body>
+</html>

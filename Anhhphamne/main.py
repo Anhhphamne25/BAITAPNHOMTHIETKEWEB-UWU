@@ -135,6 +135,7 @@ def add_research():
 
 
 
+
 #TRANG XEM BÀI NGHIÊN CỨU
 @app.route('/viewresearch/<research_id>', methods=['GET'])
 def view_research():
